@@ -1,4 +1,4 @@
-# [React Admin Panel ](hhttps://github.com/suhailkakar/React-Admin-Panel) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/suhailkakar/React-Admin-Panel/blob/main/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+# [React Admin Panel ](hhttps://github.com/suhailkakar/React-Admin-Panel) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/suhailkakar/React-Admin-Panel/blob/main/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/suhailkakar/React-Admin-Panel/)
 
 React is a JavaScript library for building user interfaces.
 
