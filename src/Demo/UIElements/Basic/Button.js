@@ -22,7 +22,17 @@ class BasicButton extends React.Component {
         users: [],
       };
     componentDidMount() {
-        axios.get('https://seheri.saikiranreddy.com/users/all')
+        let currentToken = localStorage.getItem('token')
+        currentToken = 'Bearer ' + currentToken
+        const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': currentToken 
+        }
+        
+        axios.get('https://seheri.saikiranreddy.com/users/all', {
+            headers: headers
+
+        })
         .then((e) =>{
             this.setState({users: e.data})
             console.log(e.data)

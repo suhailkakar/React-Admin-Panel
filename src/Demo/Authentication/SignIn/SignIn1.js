@@ -3,8 +3,19 @@ import {NavLink} from 'react-router-dom';
 
 import './../../../assets/scss/style.scss';
 import Aux from "../../../hoc/_Aux";
+import axios from 'axios';
 
 class SignUp1 extends React.Component {
+    submitFunc() {
+        console.log("jkasdhna")
+        axios.post('https://seheri.saikiranreddy.com/usersignup/login', {
+            "email": "sai@gmail.com",
+            "password": "123456789"
+        })
+        .then(e=> {
+            localStorage.setItem('token', e.data.token)
+        })
+    }
     render () {
         return(
             <Aux>
@@ -17,7 +28,7 @@ class SignUp1 extends React.Component {
                             <span className="r"/>
                         </div>
                         <div className="card">
-                            <div className="card-body text-center">
+                             <div className="card-body text-center">
                                 <div className="mb-4">
                                     <img src="https://i.ibb.co/Jc9wq70/1-1.png" />
                                 </div>
@@ -34,8 +45,10 @@ class SignUp1 extends React.Component {
                                             <label htmlFor="checkbox-fill-a1" className="cr" > Save credentials</label>
                                     </div>
                                 </div>
-                                <button className="btnlogin shadow-2 mb-4"> <NavLink style={{color:"white"}} to="../dashboard/default">Login</NavLink></button>
-                            </div>
+                                <button className="btnlogin shadow-2 mb-4" onClick={this.submitFunc()}> <NavLink style={{color:"white"}} to="../dashboard/default">Login</NavLink></button>
+                                <button >Submit</button>
+
+                            </div> 
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Row, Col, Card, Table } from "react-bootstrap";
-import { Link } from "react-router";
 import axios from "axios";
 
 import Aux from "../../../hoc/_Aux";
@@ -9,10 +8,22 @@ class BreadcrumbPagination extends Component {
   state = {
     users: [],
   };
+  
   componentDidMount() {
+
     const urlParams = new URLSearchParams(this.props.location.search);
     const key = urlParams.get("user_id");
-    axios.get("https://seheri.saikiranreddy.com/users/" + key).then((e) => {
+    
+    let currentToken = localStorage.getItem('token')
+    currentToken = 'Bearer ' + currentToken
+    const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': currentToken 
+    }
+    
+    axios.get("https://seheri.saikiranreddy.com/users/" + key, {
+      headers: headers
+    }).then((e) => {
       this.setState({ users: e.data });
       console.log(e.data);
     });
@@ -167,30 +178,25 @@ class BreadcrumbPagination extends Component {
                       <td>Food Catering </td>
                       <td></td>
                       <td></td>
-                      <td>
-                        <i className="fa fa-check"> </i> Yes
-                      </td>
+                      <td>{this.state.users.bol_food}</td>
                       <td></td>
                       <td>DJ Sounds </td>
                       <td></td>
                       <td></td>
-                      <td>
-                        <i className="fa fa-times"> </i> No
-                      </td>
+                      <td>{this.state.users.bol_dj}</td>
                       <td></td>
                       <td></td>
                     </tr>
 
                     <tr>
                       <td> Decoration </td>
-                      <td>
-                        <i className="fa fa-check"> </i> Yes
-                      </td>
+                      <td>{this.state.users.bol_decoration}</td>
+
                       <td></td>
                       <td>Room Available </td>
                       <td></td>
                       <td></td>
-                      <td>4 </td>
+                      <td>{this.state.users.seating_capacity}</td>
                       <td></td>
                       <td>Veg/non-Veg </td>
                       <td></td>
@@ -202,7 +208,7 @@ class BreadcrumbPagination extends Component {
 
                     <tr>
                       <td> Alcohol </td>
-                      <td>Allowed</td>
+                      <td>{this.state.users.bol_alcohol}</td>
                       <td></td>
                       <td>AC/non-AC </td>
                       <td></td>
@@ -212,31 +218,28 @@ class BreadcrumbPagination extends Component {
                       <td>Parking </td>
                       <td></td>
                       <td></td>
-                      <td>
-                        <i className="fa fa-check"> </i> Yes
-                      </td>
+                      <td>{this.state.users.bol_parking}</td>
+
                       <td></td>
                       <td></td>
                     </tr>
 
                     <tr>
                       <td> WIFI </td>
-                      <td>
-                        <i className="fa fa-times"> </i> No
-                      </td>
+                      <td>{this.state.users.bol_wifi}</td>
+
                       <td></td>
                       <td>Electricity </td>
                       <td></td>
                       <td></td>
-                      <td>
-                        <i className="fa fa-check"> </i> Yes
-                      </td>
+                      <td>{this.state.users.bol_electricity}</td>
+
                       <td></td>
                       <td>Water </td>
                       <td></td>
                       <td></td>
                       <td>
-                        <i className="fa fa-times"> </i> No
+No
                       </td>
                       <td></td>
                       <td></td>
@@ -244,23 +247,20 @@ class BreadcrumbPagination extends Component {
 
                     <tr>
                       <td> Tent House </td>
-                      <td>
-                        <i className="fa fa-check"> </i> Yes
-                      </td>
+                      <td>{this.state.users.bol_tentHouse}</td>
+
                       <td></td>
                       <td>Table/Chairs </td>
                       <td></td>
                       <td></td>
-                      <td>
-                        <i className="fa fa-check"> </i> Yes
-                      </td>
+                      <td>{this.state.users.bol_tables}</td>
+
                       <td></td>
                       <td>Kitchen Untensils </td>
                       <td></td>
                       <td></td>
-                      <td>
-                        <i className="fa fa-check"> </i> Yes
-                      </td>
+                      <td>{this.state.users.bol_kitchen}</td>
+
                       <td></td>
                       <td></td>
                     </tr>

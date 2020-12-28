@@ -15,20 +15,37 @@ class Dashboard extends React.Component {
         users: [],
       };
     approveUser(e, val) {
-        axios.patch('https://seheri.saikiranreddy.com/users/approve/' + e, {
-            "status": val
+        let currentToken = localStorage.getItem('token')
+        currentToken = 'Bearer ' + currentToken
+  const headers = {
+     'Content-Type': 'application/json',
+    'Authorization': currentToken
+  } 
+  let data = {
+    "status": val
+  }
+        axios.patch('https://seheri.saikiranreddy.com/users/approve/' + e, data, {
+            headers: headers
         })
         .then((e)=> {
             window.location.reload();
         })
     }
+    
     componentDidMount() {
-        axios.get('https://seheri.saikiranreddy.com/users')
+        let currentToken = localStorage.getItem('token')
+        currentToken = 'Bearer ' + currentToken
+  const headers = {
+     'Content-Type': 'application/json',
+    'Authorization': currentToken
+  }
+        axios.get('https://seheri.saikiranreddy.com/users', {
+            headers: headers
+        })
         .then((e) =>{
             this.setState({users: e.data})
             console.log(e.data)
-        })
-        
+    })   
         const urlParams = new URLSearchParams(this.props.location.search)
         const key = urlParams.get('user_id')
         console.log(key)
