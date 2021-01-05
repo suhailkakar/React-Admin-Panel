@@ -6,5 +6,5 @@ A well-built admin panel will increase productivity, give insight into data, and
 
 ## Installation
 1. Clone this repo
-2. Run `npm install`
-3. Run `npm start`
+2. Run `npm install / yarn`
+3. Run `npm start  / yarn start`
