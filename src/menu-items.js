@@ -16,9 +16,47 @@ export default {
                 {
                     id: 'vendor',
                     title: 'Vendors',
-                    type: 'item',
-                    url: '/vendor',
-                    icon: 'feather icon-book',
+                    type: 'collapse',
+                    icon: 'feather icon-book                    ',
+                    children: [
+                       
+                        {
+                            id: 'weddinghall',
+                            title: 'Wedding Hall',
+                            type: 'item',
+                            url: '/weddinghall'
+                        },
+                        {
+                            id: 'djmusic',
+                            title: 'DJ Music',
+                            type: 'item',
+                            url: '/djmusic'
+                        },
+                        {
+                            id: 'photographer',
+                            title: 'Photographer',
+                            type: 'item',
+                            url: '/photographer'
+                        },
+                        {
+                            id: 'makeupartist',
+                            title: 'Makeup Artist',
+                            type: 'item',
+                            url: '/makeupartist'
+                        },
+                        {
+                            id: 'eventmanagement',
+                            title: 'Event Management',
+                            type: 'item',
+                            url: '/eventmanagement'
+                        },
+                        {
+                            id: 'decorators',
+                            title: 'Decorators',
+                            type: 'item',
+                            url: '/decorators'
+                        },
+                    ]
                 },
                 {
                     id: 'user',
@@ -62,13 +100,6 @@ export default {
                     type: 'item',
                     icon: 'feather icon-star',
                     url: '/ratings'
-                },
-                {
-                    id: 'SendEmail',
-                    title: 'Send Email                    ',
-                    type: 'item',
-                    icon: 'feather icon-mail',
-                    url: '/send-email'
                 },
                 {
                     id: 'contact',

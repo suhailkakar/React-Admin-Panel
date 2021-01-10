@@ -8,19 +8,19 @@ class BreadcrumbPagination extends Component {
   state = {
     users: [],
   };
-  
+
   componentDidMount() {
 
     const urlParams = new URLSearchParams(this.props.location.search);
     const key = urlParams.get("user_id");
-    
+
     let currentToken = localStorage.getItem('token')
     currentToken = 'Bearer ' + currentToken
     const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': currentToken 
+      'Content-Type': 'application/json',
+      'Authorization': currentToken
     }
-    
+
     axios.get("https://seheri.saikiranreddy.com/users/" + key, {
       headers: headers
     }).then((e) => {
@@ -86,42 +86,7 @@ class BreadcrumbPagination extends Component {
                       <td></td>
                       <td></td>
                     </tr>
-
-                    <tr>
-                      <td style={{ fontSize: "26px" }}>
-                        <i className="feather icon-calendar"> </i> Blocked Dates
-                      </td>
-                      <td> </td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>29/04/2020 (NA)</td>
-                      <td>29/04/2020 (NA)</td>
-                      <td> </td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>{" "}
-                    </tr>
-                    <tr>
+                  <tr>
                       <td style={{ fontSize: "26px" }}>
                         <i className="feather icon-user"> </i> Contact Info
                       </td>

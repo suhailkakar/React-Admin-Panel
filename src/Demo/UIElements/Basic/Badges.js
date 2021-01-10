@@ -45,9 +45,9 @@ class Badges extends Component {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {this.state.users.map(data=>    
+                                {this.state.users.map((data, id)=>
                                 <tr>
-                                    <th scope="row">1</th>
+                                    <th scope="row">{id + 1}</th>
                                     <td>{data.fullname}</td>
                                     <td>{data.mobilenumber}</td>
                                     <td>{data.message}</td> 

@@ -9,19 +9,19 @@ class SignUp1 extends React.Component {
     submitFunc() {
         console.log("jkasdhna")
         axios.post('https://seheri.saikiranreddy.com/usersignup/login', {
-            "email": "sai@gmail.com",
-            "password": "123456789"
+            "emailphone": "kakar@email.com",
+            "password": "123456"
         })
-        .then(e=> {
-            localStorage.setItem('token', e.data.token)
-        })
+            .then(e => {
+                localStorage.setItem('token', e.data.token)
+            })
     }
     render () {
         return(
             <Aux>
                 <div className="auth-wrapper">
                     <div className="auth-content">
-                        <div className="auth-bg">
+                         <div className="auth-bg">
                             <span className="r"/>
                             <span className="r s"/>
                             <span className="r s"/>
@@ -45,9 +45,7 @@ class SignUp1 extends React.Component {
                                             <label htmlFor="checkbox-fill-a1" className="cr" > Save credentials</label>
                                     </div>
                                 </div>
-                                <button className="btnlogin shadow-2 mb-4" onClick={this.submitFunc()}> <NavLink style={{color:"white"}} to="../dashboard/default">Login</NavLink></button>
-                                <button >Submit</button>
-
+                                <button className="btnlogin shadow-2 mb-4" onClick={this.submitFunc()}> <NavLink style={{ color: "white" }} to="../dashboard/default">Login</NavLink></button>
                             </div> 
                         </div>
                     </div>

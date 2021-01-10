@@ -28,6 +28,13 @@ const OtherDocs = React.lazy(() => import('./Demo/Other/Docs'));
 
 const SendEmails = React.lazy(() => import('./Demo/UIElements/Basic/Emails'));
 const User = React.lazy(() => import('./Demo/UIElements/Basic/User'));
+const WeddingHall = React.lazy(() => import('./Demo/Business Categories/WeddingHall'));
+const Photographer = React.lazy(() => import('./Demo/Business Categories/Photographer'));
+const DjMusic = React.lazy(() => import('./Demo/Business Categories/DjMusic'));
+const EventManagement = React.lazy(() => import('./Demo/Business Categories/EventManagement'));
+const MakeupArtist = React.lazy(() => import('./Demo/Business Categories/MakeupArtist'));
+const Decorators = React.lazy(() => import('./Demo/Business Categories/Decorators'));
+const DJMusicDetails = React.lazy(() => import('./Demo/Business Categories/Details/djmusic'));
 
 const routes = [
     { path: '/dashboard/default', exact: true, name: 'Default', component: DashboardDefault },
@@ -40,11 +47,18 @@ const routes = [
     { path: '/orders/details', exact: true, name: 'Forms Elements', component: FormsElements },
     { path: '/ratings', exact: true, name: 'Bootstrap Table', component: BootstrapTable },
     { path: '/charts/nvd3', exact: true, name: 'Nvd3 Chart', component: Nvd3Chart },
-    { path: '/vendor/details', exact: true, name: 'Google Map', component: GoogleMap },
+    { path: '/vendor/wedding_hall/details', exact: true, name: 'Google Map', component: GoogleMap },
     { path: '/add-coupons', exact: true, name: 'Sample Page', component: OtherSamplePage },
     { path: '/add-offers', exact: true, name: 'Documentation', component: OtherDocs },
     { path: '/send-email', exact: true, name: 'Send Emails', component: SendEmails },
     { path: '/users', exact: true, name: 'Users', component: User },
+    { path: '/weddinghall', exact: true, name: 'Wedding Hall', component: WeddingHall },
+    { path: '/photographer', exact: true, name: 'Photographer', component: Photographer },
+    { path: '/djmusic', exact: true, name: 'DjMusic', component: DjMusic },
+    { path: '/eventmanagement', exact: true, name: 'EventManagement', component: EventManagement },
+    { path: '/makeupartist', exact: true, name: 'MakeupArtist', component: MakeupArtist },
+    { path: '/decorators', exact: true, name: 'Decorators', component: Decorators },
+    { path: '/vendor/djmusic/details', exact: true, name: 'DJMusicDetails', component: DJMusicDetails },
 ];
 
 export default routes;
