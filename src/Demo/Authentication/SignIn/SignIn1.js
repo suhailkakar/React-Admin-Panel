@@ -9,7 +9,7 @@ class SignUp1 extends React.Component {
     submitFunc() {
         console.log("jkasdhna")
         axios.post('https://seheri.saikiranreddy.com/usersignup/login', {
-            "emailphone": "kakar@email.com",
+            "emailphone": "john@test.com",
             "password": "123456"
         })
             .then(e => {

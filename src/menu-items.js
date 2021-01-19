@@ -19,7 +19,7 @@ export default {
                     type: 'collapse',
                     icon: 'feather icon-book                    ',
                     children: [
-                       
+
                         {
                             id: 'weddinghall',
                             title: 'Wedding Hall',
@@ -145,12 +145,35 @@ export default {
                     ]
                 },
                 {
+                    id: 'legal',
+                    title: 'Legal',
+                    type: 'collapse',
+                    icon: 'feather icon-file-text                    ',
+                    children: [
+                        {
+                            id: 'terms',
+                            title: 'Terms and Conditions',
+                            type: 'item',
+                            url: '/termsandconditions'
+                        },
+                        {
+                            id: 'policy',
+                            title: 'Privacy Policy',
+                            type: 'item',
+                            url: '/privacypolicy'
+                        },
+
+                    ]
+                },
+
+                {
                     id: 'logout',
                     title: 'Logout',
                     type: 'item',
                     icon: 'feather icon-power',
                     url: "/auth/signin-1"
                 },
+
             ]
         },
         // {
