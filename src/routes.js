@@ -6,74 +6,33 @@ window.$ = $;
 global.jQuery = $;
 
 const DashboardDefault = React.lazy(() => import("./Demo/Dashboard/Default"));
+const Vendor = React.lazy(() =>import("./Demo/UIElements/Basic/Vendor"));
+const Contact = React.lazy(() => import("./Demo/UIElements/Basic/Contact") );
+const Enquiries  = React.lazy(() => import("./Demo/UIElements/Basic/Enquiries"));
+const Completed_Orders = React.lazy(() => import("./Demo/UIElements/Basic/Completed_Orders"));
+const Refund = React.lazy(() => import("./Demo/UIElements/Basic/Refund"));
+const Orders = React.lazy(() => import("./Demo/UIElements/Basic/Orders") );
 
-const UIBasicButton = React.lazy(() =>
-    import("./Demo/UIElements/Basic/Button")
-);
-const UIBasicBadges = React.lazy(() =>
-    import("./Demo/UIElements/Basic/Badges")
-);
-const UIBasicBreadcrumbPagination = React.lazy(() =>
-    import("./Demo/UIElements/Basic/BreadcrumbPagination")
-);
-
-const UIBasicCollapse = React.lazy(() =>
-    import("./Demo/UIElements/Basic/Collapse")
-);
-const UIBasicTabsPills = React.lazy(() =>
-    import("./Demo/UIElements/Basic/TabsPills")
-);
-const UIBasicBasicTypography = React.lazy(() =>
-    import("./Demo/UIElements/Basic/Typography")
-);
-
-const FormsElements = React.lazy(() => import("./Demo/Forms/FormsElements"));
-
-const BootstrapTable = React.lazy(() => import("./Demo/Tables/BootstrapTable"));
-
-const Nvd3Chart = React.lazy(() => import("./Demo/Charts/Nvd3Chart/index"));
+const OrderDetails = React.lazy(() => import("./Demo/Forms/OrderDetails"));
+const Rating = React.lazy(() => import("./Demo/Tables/Rating"));
 
 const WeddingHallDetails = React.lazy(() => import("./Demo/Business Categories/Details/weddinghall"));
+const Coupons = React.lazy(() => import("./Demo/Other/Coupons"));
 
-const OtherSamplePage = React.lazy(() => import("./Demo/Other/SamplePage"));
-const OtherDocs = React.lazy(() => import("./Demo/Other/Docs"));
-
+const Offers = React.lazy(() => import("./Demo/Other/Offers"));
 const SendEmails = React.lazy(() => import("./Demo/UIElements/Basic/Emails"));
 const User = React.lazy(() => import("./Demo/UIElements/Basic/User"));
-const WeddingHall = React.lazy(() =>
-    import("./Demo/Business Categories/WeddingHall")
-);
-const Photographer = React.lazy(() =>
-    import("./Demo/Business Categories/Photographer")
-);
+const WeddingHall = React.lazy(() => import("./Demo/Business Categories/WeddingHall"));
+const Photographer = React.lazy(() => import("./Demo/Business Categories/Photographer"));
 const DjMusic = React.lazy(() => import("./Demo/Business Categories/DjMusic"));
-const EventManagement = React.lazy(() =>
-    import("./Demo/Business Categories/EventManagement")
-);
-const MakeupArtist = React.lazy(() =>
-    import("./Demo/Business Categories/MakeupArtist")
-);
-const Decorators = React.lazy(() =>
-    import("./Demo/Business Categories/Decorators")
-);
-const DJMusicDetails = React.lazy(() =>
-    import("./Demo/Business Categories/Details/djmusic")
-);
-const DecoratorDetail = React.lazy(() =>
-    import("./Demo/Business Categories/Details/decorator")
-);
-const PhotographerDetails = React.lazy(() =>
-    import("./Demo/Business Categories/Details/photographer")
-);
-const MakeupArtistDetail = React.lazy(() =>
-    import("./Demo/Business Categories/Details/makeupartist")
-);
-
-
-
-const TermsandConditions = React.lazy(() =>
-    import("./Demo/Legal/TermsandConditions")
-);
+const EventManagement = React.lazy(() => import("./Demo/Business Categories/EventManagement") );
+const MakeupArtist = React.lazy(() => import("./Demo/Business Categories/MakeupArtist"));
+const Decorators = React.lazy(() =>import("./Demo/Business Categories/Decorators"));
+const DJMusicDetails = React.lazy(() => import("./Demo/Business Categories/Details/djmusic"));
+const DecoratorDetail = React.lazy(() => import("./Demo/Business Categories/Details/decorator"));
+const PhotographerDetails = React.lazy(() => import("./Demo/Business Categories/Details/photographer"));
+const MakeupArtistDetail = React.lazy(() => import("./Demo/Business Categories/Details/makeupartist"));
+const TermsandConditions = React.lazy(() => import("./Demo/Legal/TermsandConditions") );
 const PrivacyPolicy = React.lazy(() => import("./Demo/Legal/PrivacyPolicy"));
 
 const routes = [
@@ -87,55 +46,49 @@ const routes = [
         path: "/vendor/",
         exact: true,
         name: "Basic Button",
-        component: UIBasicButton,
+        component: Vendor,
     },
     {
         path: "/contact",
         exact: true,
         name: "Basic Badges",
-        component: UIBasicBadges,
+        component: Contact,
     },
     {
         path: "/enquiries",
         exact: true,
         name: "Basic Breadcrumb Pagination",
-        component: UIBasicBreadcrumbPagination,
+        component: Enquiries ,
     },
     {
         path: "/completed-orders",
         exact: true,
         name: "Basic Collapse",
-        component: UIBasicCollapse,
+        component: Completed_Orders,
     },
     {
         path: "/refunds",
         exact: true,
         name: "Basic Tabs & Pills",
-        component: UIBasicTabsPills,
+        component: Refund,
     },
     {
         path: "/orders",
         exact: true,
         name: "Basic Typography",
-        component: UIBasicBasicTypography,
+        component: Orders,
     },
     {
         path: "/orders/details",
         exact: true,
         name: "Forms Elements",
-        component: FormsElements,
+        component: OrderDetails,
     },
     {
         path: "/ratings",
         exact: true,
         name: "Bootstrap Table",
-        component: BootstrapTable,
-    },
-    {
-        path: "/charts/nvd3",
-        exact: true,
-        name: "Nvd3 Chart",
-        component: Nvd3Chart,
+        component: Rating,
     },
     {
         path: "/vendor/wedding_hall/details",
@@ -147,13 +100,13 @@ const routes = [
         path: "/add-coupons",
         exact: true,
         name: "Sample Page",
-        component: OtherSamplePage,
+        component: Coupons,
     },
     {
         path: "/add-offers",
         exact: true,
         name: "Documentation",
-        component: OtherDocs,
+        component: Offers,
     },
     {
         path: "/send-email",
