@@ -91,12 +91,6 @@ class Navigation extends Component {
             document.body.classList.remove('datta-dark');
         }
 
-        if (this.props.rtlLayout) {
-            document.body.classList.add('datta-rtl');
-        } else {
-            document.body.classList.remove('datta-rtl');
-        }
-
         if (this.props.boxLayout) {
             document.body.classList.add('container');
             document.body.classList.add('box-layout');

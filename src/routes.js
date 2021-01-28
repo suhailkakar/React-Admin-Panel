@@ -5,35 +5,35 @@ window.jQuery = $;
 window.$ = $;
 global.jQuery = $;
 
-const DashboardDefault = React.lazy(() => import("./Demo/Dashboard/Default"));
-const Vendor = React.lazy(() =>import("./Demo/UIElements/Basic/Vendor"));
-const Contact = React.lazy(() => import("./Demo/UIElements/Basic/Contact") );
-const Enquiries  = React.lazy(() => import("./Demo/UIElements/Basic/Enquiries"));
-const Completed_Orders = React.lazy(() => import("./Demo/UIElements/Basic/Completed_Orders"));
-const Refund = React.lazy(() => import("./Demo/UIElements/Basic/Refund"));
-const Orders = React.lazy(() => import("./Demo/UIElements/Basic/Orders") );
+const DashboardDefault = React.lazy(() => import("./Data/Dashboard/Default"));
+const Vendor = React.lazy(() =>import("./Data/UIElements/Basic/Vendor"));
+const Contact = React.lazy(() => import("./Data/UIElements/Basic/Contact") );
+const Enquiries  = React.lazy(() => import("./Data/UIElements/Basic/Enquiries"));
+const Completed_Orders = React.lazy(() => import("./Data/UIElements/Basic/Completed_Orders"));
+const Refund = React.lazy(() => import("./Data/UIElements/Basic/Refund"));
+const Orders = React.lazy(() => import("./Data/UIElements/Basic/Orders") );
 
-const OrderDetails = React.lazy(() => import("./Demo/Forms/OrderDetails"));
-const Rating = React.lazy(() => import("./Demo/Tables/Rating"));
+const OrderDetails = React.lazy(() => import("./Data/Forms/OrderDetails"));
+const Rating = React.lazy(() => import("./Data/Tables/Rating"));
 
-const WeddingHallDetails = React.lazy(() => import("./Demo/Business Categories/Details/weddinghall"));
-const Coupons = React.lazy(() => import("./Demo/Other/Coupons"));
+const WeddingHallDetails = React.lazy(() => import("./Data/Business Categories/Details/weddinghall"));
+const Coupons = React.lazy(() => import("./Data/Other/Coupons"));
 
-const Offers = React.lazy(() => import("./Demo/Other/Offers"));
-const SendEmails = React.lazy(() => import("./Demo/UIElements/Basic/Emails"));
-const User = React.lazy(() => import("./Demo/UIElements/Basic/User"));
-const WeddingHall = React.lazy(() => import("./Demo/Business Categories/WeddingHall"));
-const Photographer = React.lazy(() => import("./Demo/Business Categories/Photographer"));
-const DjMusic = React.lazy(() => import("./Demo/Business Categories/DjMusic"));
-const EventManagement = React.lazy(() => import("./Demo/Business Categories/EventManagement") );
-const MakeupArtist = React.lazy(() => import("./Demo/Business Categories/MakeupArtist"));
-const Decorators = React.lazy(() =>import("./Demo/Business Categories/Decorators"));
-const DJMusicDetails = React.lazy(() => import("./Demo/Business Categories/Details/djmusic"));
-const DecoratorDetail = React.lazy(() => import("./Demo/Business Categories/Details/decorator"));
-const PhotographerDetails = React.lazy(() => import("./Demo/Business Categories/Details/photographer"));
-const MakeupArtistDetail = React.lazy(() => import("./Demo/Business Categories/Details/makeupartist"));
-const TermsandConditions = React.lazy(() => import("./Demo/Legal/TermsandConditions") );
-const PrivacyPolicy = React.lazy(() => import("./Demo/Legal/PrivacyPolicy"));
+const Offers = React.lazy(() => import("./Data/Other/Offers"));
+const SendEmails = React.lazy(() => import("./Data/UIElements/Basic/Emails"));
+const User = React.lazy(() => import("./Data/UIElements/Basic/User"));
+const WeddingHall = React.lazy(() => import("./Data/Business Categories/WeddingHall"));
+const Photographer = React.lazy(() => import("./Data/Business Categories/Photographer"));
+const DjMusic = React.lazy(() => import("./Data/Business Categories/DjMusic"));
+const EventManagement = React.lazy(() => import("./Data/Business Categories/EventManagement") );
+const MakeupArtist = React.lazy(() => import("./Data/Business Categories/MakeupArtist"));
+const Decorators = React.lazy(() =>import("./Data/Business Categories/Decorators"));
+const DJMusicDetails = React.lazy(() => import("./Data/Business Categories/Details/djmusic"));
+const DecoratorDetail = React.lazy(() => import("./Data/Business Categories/Details/decorator"));
+const PhotographerDetails = React.lazy(() => import("./Data/Business Categories/Details/photographer"));
+const MakeupArtistDetail = React.lazy(() => import("./Data/Business Categories/Details/makeupartist"));
+const TermsandConditions = React.lazy(() => import("./Data/Legal/TermsandConditions") );
+const PrivacyPolicy = React.lazy(() => import("./Data/Legal/PrivacyPolicy"));
 
 const routes = [
     {
