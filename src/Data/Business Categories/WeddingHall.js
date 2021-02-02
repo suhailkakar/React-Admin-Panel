@@ -20,7 +20,9 @@ class BasicButton extends React.Component {
     state = {
         users: [],
     };
+
     componentDidMount() {
+
         let currentToken = localStorage.getItem('token')
         currentToken = 'Bearer ' + currentToken
         const headers = {
@@ -36,14 +38,20 @@ class BasicButton extends React.Component {
                 this.setState({ users: e.data })
                 console.log(e.data)
             })
+
+
+
+
     }
+
+
+
     render() {
         return (
             <Aux>
                 <Row>
                     <Col>
-
-                        <Table responsive hover>
+                        <Table responsive hover >
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -86,7 +94,7 @@ class BasicButton extends React.Component {
                     </Col>
                 </Row>
 
-            </Aux>
+            </Aux >
         );
     }
 }

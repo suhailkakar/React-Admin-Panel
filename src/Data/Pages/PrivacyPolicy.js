@@ -15,13 +15,16 @@ export default function App() {
     };
     const [posts, setPosts] = useState([])
     const getPosts = async () => {
-        try {
-            const userPosts = await axios.get("https://seheri.saikiranreddy.com/admin/all")
+        let token = localStorage.getItem("token");
+        let headers = {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+            },
+        };
 
-            setPosts(userPosts.data);  // set State
-        } catch (err) {
-            console.error(err.message);
-        }
+        const userPosts = await axios.get("https://seheri.saikiranreddy.com/admin/all", headers)
+        setPosts(userPosts.data);  // set State
     }
 
     useEffect(() => {
