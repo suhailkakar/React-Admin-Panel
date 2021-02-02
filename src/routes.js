@@ -7,12 +7,12 @@ global.jQuery = $;
 
 const DashboardDefault = React.lazy(() => import("./Data/Pages/Default"));
 
-const Vendor = React.lazy(() =>import("./Data/Pages/Basic/Vendor"));
-const Contact = React.lazy(() => import("./Data/Pages/Basic/Contact") );
-const Enquiries  = React.lazy(() => import("./Data/Pages/Basic/Enquiries"));
+const Vendor = React.lazy(() => import("./Data/Pages/Basic/Vendor"));
+const Contact = React.lazy(() => import("./Data/Pages/Basic/Contact"));
+const Enquiries = React.lazy(() => import("./Data/Pages/Basic/Enquiries"));
 const Completed_Orders = React.lazy(() => import("./Data/Pages/Basic/Completed_Orders"));
 const Refund = React.lazy(() => import("./Data/Pages/Basic/Refund"));
-const Orders = React.lazy(() => import("./Data/Pages/Basic/Orders") );
+const Orders = React.lazy(() => import("./Data/Pages/Basic/Orders"));
 
 const OrderDetails = React.lazy(() => import("./Data/Pages/OrderDetails"));
 const Rating = React.lazy(() => import("./Data/Pages/Rating"));
@@ -26,15 +26,18 @@ const User = React.lazy(() => import("./Data/Pages/Basic/User"));
 const WeddingHall = React.lazy(() => import("./Data/Business Categories/WeddingHall"));
 const Photographer = React.lazy(() => import("./Data/Business Categories/Photographer"));
 const DjMusic = React.lazy(() => import("./Data/Business Categories/DjMusic"));
-const EventManagement = React.lazy(() => import("./Data/Business Categories/EventManagement") );
+const EventManagement = React.lazy(() => import("./Data/Business Categories/EventManagement"));
 const MakeupArtist = React.lazy(() => import("./Data/Business Categories/MakeupArtist"));
-const Decorators = React.lazy(() =>import("./Data/Business Categories/Decorators"));
+const Decorators = React.lazy(() => import("./Data/Business Categories/Decorators"));
 const DJMusicDetails = React.lazy(() => import("./Data/Business Categories/Details/djmusic"));
 const DecoratorDetail = React.lazy(() => import("./Data/Business Categories/Details/decorator"));
 const PhotographerDetails = React.lazy(() => import("./Data/Business Categories/Details/photographer"));
 const MakeupArtistDetail = React.lazy(() => import("./Data/Business Categories/Details/makeupartist"));
-const TermsandConditions = React.lazy(() => import("./Data/Pages/TermsandConditions") );
+const TermsandConditions = React.lazy(() => import("./Data/Pages/TermsandConditions"));
 const PrivacyPolicy = React.lazy(() => import("./Data/Pages/PrivacyPolicy"));
+
+
+const Failed = React.lazy(() => import("./Data/Authentication/SignIn/Failed"));
 
 const routes = [
     {
@@ -59,13 +62,19 @@ const routes = [
         path: "/enquiries",
         exact: true,
         name: "Basic Breadcrumb Pagination",
-        component: Enquiries ,
+        component: Enquiries,
     },
     {
         path: "/completed-orders",
         exact: true,
         name: "Basic Collapse",
         component: Completed_Orders,
+    },
+    {
+        path: "/failed-login",
+        exact: true,
+        name: "Failed",
+        component: Failed,
     },
     {
         path: "/refunds",

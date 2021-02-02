@@ -11,7 +11,9 @@ class Failed extends Component {
         return <h1>asdas</h1>
     }
 }
-export default class CreateUser extends Component {
+export default Failed
+
+class SignIn extends Component {
 
     constructor(props) {
         super(props)
@@ -49,8 +51,8 @@ export default class CreateUser extends Component {
                 if (e.data.success == "1") {
                     this.props.history.push("/dashboard/default");
                 }
-                else if (e.data.success = "4") {
-                    return <Failed />
+                if (e.data.success == "4") {
+                    this.props.history.push("/signin");
                 }
             })
 
@@ -83,7 +85,9 @@ export default class CreateUser extends Component {
                                     <div className="input-group mb-4">
                                         <input type="password" value={this.state.password} onChange={this.onChangeUserName} className="form-control" placeholder="Password" required autocomplete='false' />
                                     </div>
+
                                     <input type="submit" value=" Login " className="btnlogin shadow-2 mb-4" />
+
                                 </form>
                             </div>
                         </div>

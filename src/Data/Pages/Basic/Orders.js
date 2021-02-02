@@ -7,29 +7,27 @@ import DatePicker from 'react-date-picker'
 class BasicTypography extends Component {
 
 
-    state = {
-        users: [],
+  state = {
+    users: [],
+  };
+
+  componentDidMount() {
+    // const value = await AsyncStorage.getItem("userId");
+    const token = localStorage.getItem('token')
+    let headers = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
     };
+    axios.get("https://seheri.saikiranreddy.com/users/vendorpendingorders/60057c0008779a91704d7c47", headers).then((e) => {
+      this.setState({ users: e.data });
+      // console.log(users)
 
-     componentDidMount() {
-        // const value = await AsyncStorage.getItem("userId");
-        const token = localStorage.getItem('token')
-        let headers = {
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
-            },
-        };
-        axios.get("https://seheri.saikiranreddy.com/users/vendorpendingorders/60057c0008779a91704d7c47", headers).then((e) => {
-            this.setState({ users: e.data });
-            // console.log(users)
+    });
 
-    
-    
-        });
-    
-    }
-    
+  }
+
   render() {
     return (
       <Aux>
@@ -133,7 +131,7 @@ class BasicTypography extends Component {
                 <option>Warangal</option>
                 <option>Khamam</option>
               </Form.Control>
-       
+
               <Form.Control
                 style={{ marginLeft: "19px" }}
                 type="date"
@@ -165,7 +163,7 @@ class BasicTypography extends Component {
                 <Card.Title as="h5">Order Details </Card.Title>
               </Card.Header>
               <Card.Body className="px-0 py-2">
-              {/* {this.state.users.map((data, id) =>   */}
+                {/* {this.state.users.map((data, id) =>   */}
 
                 <Table responsive hover>
                   <tbody>
@@ -249,8 +247,8 @@ class BasicTypography extends Component {
                     </tr>
                   </tbody>
                 </Table>
-              {/* )} */}
-             </Card.Body>
+                {/* )} */}
+              </Card.Body>
             </Card>
           </Col>
         </Row>
