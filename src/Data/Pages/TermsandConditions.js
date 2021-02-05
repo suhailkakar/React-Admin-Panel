@@ -66,9 +66,16 @@ export default function App() {
 
 
           function submitdata() {
+            let token = localStorage.getItem("token");
+            let headers = {
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+            };
             axios.patch('https://seheri.saikiranreddy.com/admin/terms-and-conditions/60057c0008779a91704d7c47', {
               "termsandconditions": wysiwyg,
-            })
+            }, headers)
               .then(e => {
                 // console.log('Updated TAC is   ', e.data),
                 alert("Changes Saved Successfully")
